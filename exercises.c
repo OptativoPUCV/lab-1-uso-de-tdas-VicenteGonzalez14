@@ -57,7 +57,7 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   int talla = get_size(L);
+   //int talla = get_size(L);
    int suma = 5;
    /*for(int i = 0; i <= talla; i++){
       suma += current
@@ -75,9 +75,9 @@ posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List*L, int elem){
-   int talla = get_size(L);
-   for(int i = 0; i >=)
-   if(elem == L)
+  // int talla = get_size(L);
+   //for(int i = 0; i >=)
+  // if(elem == L)
 }
 
 /*
