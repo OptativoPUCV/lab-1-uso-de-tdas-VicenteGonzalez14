@@ -84,3 +84,40 @@ Thu, Mar 20, 2025  5:38:16 PM:
  1 file changed, 2 insertions(+)
  tests:  0|0
 7452075
+Thu, Mar 20, 2025  5:48:00 PM: 
+ exercises.c | 14 +++++++++-----
+ 1 file changed, 9 insertions(+), 5 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'crea_lista':
+exercises.c:47:23: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+       int *elemento = (List*)malloc(sizeof(L));
+                       ^
+exercises.c:49:20: error: passing argument 2 of 'pushFront' makes pointer from integer without a cast [-Werror=int-conversion]
+       pushFront(L, i);
+                    ^
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:17:6: note: expected 'void *' but argument is of type 'int'
+ void pushFront(List *L, void *dato);
+      ^~~~~~~~~
+In file included from test.c:5:0:
+exercises.c: In function 'sumaLista':
+exercises.c:60:8: error: unused variable 'talla' [-Werror=unused-variable]
+    int talla = get_size(L);
+        ^~~~~
+exercises.c: In function 'eliminaElementos':
+exercises.c:79:23: error: expected expression before ')' token
+    for(int i = 0; i >=)
+                       ^
+exercises.c:80:12: error: comparison between pointer and integer [-Werror]
+    if(elem == L)
+            ^~
+exercises.c:81:1: error: expected expression before '}' token
+ }
+ ^
+exercises.c:78:8: error: unused variable 'talla' [-Werror=unused-variable]
+    int talla = get_size(L);
+        ^~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+a5712b5
