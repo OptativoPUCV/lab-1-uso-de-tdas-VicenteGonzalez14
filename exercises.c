@@ -57,12 +57,12 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   int talla = get_size(L);
    int suma = 0;
-   for(int i = 1; i <= talla; i++){
-      int *elemento =  first(L);
-      *elemento = i;
+   int *elemento;
+   while(first(L) != NULL){
+      elemento =  first(L);
       suma += *elemento;
+      popFront(L);
    }
    return suma;
 }
@@ -77,9 +77,17 @@ posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List*L, int elem){
-  // int talla = get_size(L);
-   //for(int i = 0; i >=)
-  // if(elem == L)
+  /*int talla = get_size(L);
+   int *current;
+   current = first(L)
+   for(int i = 0; i >= talla; i++){
+      if(elem == current){
+         popCurrent(L);
+      }
+      next(L);
+   }
+   
+*/  
 }
 
 /*
@@ -102,4 +110,5 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
    return 0;
 }
+
 
