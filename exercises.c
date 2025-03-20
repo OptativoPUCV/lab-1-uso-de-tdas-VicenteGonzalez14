@@ -57,11 +57,11 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   //int talla = get_size(L);
-   int suma = 5;
-   /*for(int i = 0; i <= talla; i++){
-      suma += current
-   }*/
+   int talla = get_size(L);
+   int suma = 0;
+   for(int i = 0; i <= talla; i++){
+      suma += i;
+   }
    return suma;
 }
 
